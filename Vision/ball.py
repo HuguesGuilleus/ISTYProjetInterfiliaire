@@ -13,14 +13,14 @@ def track(image,color):
     '''
 
     if color=="red":
-        a,b,c=150,150,50
-        d,e,f=180,255,150
+        a,b,c=170,67,54
+        d,e,f=179,255,255
     elif color == "green":
-        a,b,c=40,70,70
-        d,e,f=80,200,200
+        a,b,c=45,0,0
+        d,e,f=140,255,107
     elif color =="blue":
-        a,b,c=78,158,124
-        d,e,f=138,255,255
+        a,b,c=95,81,100
+        d,e,f=125,255,255
 
     
     # On brouille l'image pour attenuer les variations possibles
