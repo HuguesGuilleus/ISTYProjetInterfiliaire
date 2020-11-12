@@ -1,5 +1,32 @@
-import tkinter
 
-top = tkinter.Tk()
-# Code to add widgets will go here...
-top.mainloop()
+
+from tkinter import *
+
+def main_window():    #Affichage les evenements et le menu pour rajouter/modifier/supprimer un evenement
+    window = Tk()
+    window.geometry("1280x800+200+100")
+    window.title("IHM !")
+    window.configure(background="black")
+
+
+    Label(window, text="Interface de choix des couleurs", bg="black", fg="red", font="TimesNewRoman 20 bold italic").grid(row=0, column=3, pady=20)
+
+
+    Button(window, text="Choisir rouge", command=rouge).grid(row=1, column=3, pady=15)
+    Button(window, text="Choisir bleu", command=bleu).grid(row=2, column=3, pady=15)
+    Button(window, text="Choisir vert", command=vert).grid(row=3, column=3, pady=15)
+
+
+    window.mainloop()
+
+def rouge():
+    print("ROUGE!")
+
+def bleu():
+    print("BLEU")
+
+def vert():
+    print("VERT")
+
+
+main_window()
