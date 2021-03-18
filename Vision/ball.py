@@ -2,6 +2,7 @@
 import cv2
 import numpy as np
 import time
+import sys
 
 WINDOW_NAME = 'BallTracker' 
 
@@ -76,7 +77,6 @@ def track(image,color):
 # On teste avec le flux de la caméra
 
 # On teste avec le flux de la caméra
-color = str(input("Entrer la couleur que vous voulez pointer "))
 capture = cv2.VideoCapture(0)    
 while True:
 
@@ -84,11 +84,11 @@ while True:
 
     if okay:
         
-        ctr = track(image,color)         #Si un flux de caméra existe, on utilise track (on trouve le centre de l'objet)
+        ctr = track(image,sys.argv[1])         #Si un flux de caméra existe, on utilise track (on trouve le centre de l'objet)
         x = ctr[0]
         y = ctr[1]
         print(int(x/7) , int(y/7))
-        if not track(image,color):
+        if not track(image,sys.argv[1]):
             break
 
         if cv2.waitKey(1) & 0xFF == 27:
