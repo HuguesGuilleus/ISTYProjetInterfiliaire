@@ -4,9 +4,8 @@ L'idée est d'avoir un client (un petit truc en ligne de commande ou bien un tru
 
 ## Format
 
-
 ```txt
-exe:commande nb1 nb2 
+exe:commande nb1 nb2
 ack:commande
 ```
 
@@ -21,4 +20,3 @@ Les nombres nb1 et nb2 doivent toujours êtres présents mais peuvent ne pas ser
 - move: se déplace au coordonée x y
 - axe: axe se déplace de nb2 degré // pas sur qu'on l'utilise
 	nb2 est en radian, degrée???
-

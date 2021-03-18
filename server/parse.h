@@ -5,17 +5,17 @@
 
 // The type of the command.
 enum command_kind {
-        ERROR, // Used if parse_command fail.
-        RESET,
-        STOP,
-        MOVE,
-        AXE,
+	ERROR, // Used if parse_command fail.
+	RESET,
+	STOP,
+	MOVE,
+	AXE,
 };
 
 // Define the status of the command, for execution or acknowledgement.
 enum status_command {
-        EXE, // Execution
-        ACK, // Acknowledgment
+	EXE, // Execution
+	ACK, // Acknowledgment
 };
 
 // One command.
