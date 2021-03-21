@@ -9,7 +9,7 @@ int parse_command(char *s, size_t len, command *cmd) {
 	// Get status
 	if (strncmp(s, "exe:", 4)) {
 		cmd->status = EXE;
-	} else if (s, "ack:", 4) {
+	} else if (strncmp(s, "ack:", 4)) {
 		cmd->status = ACK;
 	} else {
 		return 1;
