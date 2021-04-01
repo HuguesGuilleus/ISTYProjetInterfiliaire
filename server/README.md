@@ -9,9 +9,7 @@ exe:commande nb1 nb2
 ack:commande
 ```
 
-Les nombres nb1 et nb2 doivent toujours êtres présents mais peuvent ne pas servir pour certaine commande. Ils sont encodé de décimal.
-
-*On fini par un retour à léa lignre, retour chario, caractère nul?*
+Les nombres nb1 et nb2 doivent toujours êtres présents mais peuvent ne pas servir pour certaine commande. Ils sont encodé de décimal. Il peut y avoir un espace, un saut de ligne ou un caractère nul à la fin.
 
 ## Liste des ordres
 

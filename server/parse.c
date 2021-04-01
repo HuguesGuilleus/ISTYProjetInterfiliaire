@@ -7,9 +7,9 @@ int parse_command(char *s, size_t len, command *cmd) {
 	*cmd = (command){};
 
 	// Get status
-	if (strncmp(s, "exe:", 4)) {
+	if (!strncmp(s, "exe:", 4)) {
 		cmd->status = EXE;
-	} else if (strncmp(s, "ack:", 4)) {
+	} else if (!strncmp(s, "ack:", 4)) {
 		cmd->status = ACK;
 	} else {
 		return 1;
@@ -45,7 +45,7 @@ int parse_command(char *s, size_t len, command *cmd) {
 int test_parse_command() {
 	command cmd = {};
 	return parse_command("exe:reset 42 93", 15, &cmd) != 0 ||
-	       cmd.status != ACK || cmd.kind != RESET || cmd.a != 42 ||
+	       cmd.status != EXE || cmd.kind != RESET || cmd.a != 42 ||
 	       cmd.b != 93;
 }
 
