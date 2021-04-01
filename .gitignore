@@ -1,4 +1,5 @@
 *.o
 a.out
-doc.html
+*.html
 test
+__pycache__
